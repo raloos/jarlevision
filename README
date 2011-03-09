@@ -1,0 +1,18 @@
+JARLEVISION
+
+Jarlevision is an example Java client for the TCP server / client plugin of Parlevision.
+
+No binary is made available or will be because this is an example on how to get started building a Java client for the Parlevision TCP protocol and should not considered a complete program.
+
+LICENSE
+The license is LGPLv3. See COPYING document in root for license details.
+
+DEPENDENCIES
+Jarlevision uses the Qt Jambi Java bindings which you can find at http://qt-jambi.org/. This example was built and tested using the Qt-Jambi 4.7.1-beta3 version for Windows. Do not use the 4.7.0-beta2 version since it contains memory leaks when using the QImage stream operators.
+
+Important: when using the 32-bit Jambi binaries you need a 32-bit JVM as well.
+
+It does not depend on the Parlevision source in any way. If you however want to see the program do something useful the Parlevision TCP server should be running.
+
+SETTING UP THE PROJECT IN ECLIPSE
+Create a new Java project and add the source files in the src directory. Open project properties and select Java Build Path and go to the Libraries tab. Click 'Add external JAR' and add the qtjambi-4.7.1.jar in the Qt Jambi directory. Select the qtjambi-4.7.1.jar and expand it. Select "Native library location", click "edit...". Fill out the directory "path/to/qtjambi/bin" (e.g. C:\qtjambi-4.7.1\bin). This will ensure that the Qt native libraries can be found.
